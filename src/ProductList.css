@@ -197,6 +197,7 @@ body {
 .cart{
     color: white;
     display: flex;
+    position: relative;
 }
 .cart_quantity_count{
     margin-top: 16px;
@@ -235,6 +236,20 @@ body {
       flex: 1 1 calc(33.33% - 20px);
       max-width: calc(33.33% - 20px);
     }
+    
+    .luxury {
+        width: 450px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .tag {
+        width: 300px;
+    }
+    
+    .luxury {
+        width: 350px;
+    }
   }
   
   @media (max-width: 768px) {
@@ -242,32 +257,53 @@ body {
       flex: 1 1 calc(50% - 20px);
       max-width: calc(50% - 20px);
     }
+    
     .navbar {
         flex-direction: column;
         align-items: center;
-      }
+        padding: 15px 10px;
+    }
     
-      .tag {
+    .tag {
         margin-bottom: 20px;
         text-align: center;
-      }
+        width: 100%;
+    }
     
-      .ul {
-        display: flex;
+    .luxury {
+        width: auto;
+        justify-content: center;
+    }
+    
+    /* Cart icon styling for mobile */
+    .cart svg {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .luxury {
         flex-direction: column;
-        gap: 10px;
-      }
-    
-      .ul div {
         text-align: center;
+        gap: 10px;
+    }
+    
+    .luxury img {
+        margin-bottom: 10px;
     }
 }
 
 /* Add the cart badge styling */
 .cart-badge {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: -5px;
     background-color: #ff4757;
     color: white;
     border-radius: 50%;

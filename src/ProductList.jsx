@@ -224,14 +224,16 @@ function ProductList({ onHomeClick }) {
         padding: '15px',
         display: 'flex',
         justifyContent: 'space-between',
-        alignIems: 'center',
+        alignItems: 'center',
         fontSize: '20px',
+        flexWrap: 'wrap',
     }
     const styleObjUl = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        width: '1100px',
+        gap: '20px',
+        minWidth: '150px',
     }
     const styleA = {
         color: 'white',
@@ -296,8 +298,8 @@ function ProductList({ onHomeClick }) {
                     <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div>
                     <div> 
                         <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
-                            <h1 className='cart'>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68">
+                            <div className='cart'>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="42" width="42">
                                     <rect width="156" height="156" fill="none"></rect>
                                     <circle cx="80" cy="216" r="12"></circle>
                                     <circle cx="184" cy="216" r="12"></circle>
@@ -306,7 +308,7 @@ function ProductList({ onHomeClick }) {
                                 {getCartCount() > 0 && 
                                     <span className="cart-badge">{getCartCount()}</span>
                                 }
-                            </h1>
+                            </div>
                         </a>
                     </div>
                 </div>
